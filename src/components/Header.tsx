@@ -45,7 +45,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-             <a href="tel:07809763590" className="text-sm font-semibold text-gray-700 hover:text-blue-600">07809 763 590</a>
+             <a href="tel:07809763590" className="text-sm font-semibold text-gray-700 hover:text-blue-600">07809 763590</a>
             <a
               href="https://wa.me/447809763590"
               target="_blank"
@@ -91,7 +91,7 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
-             <a href="tel:07809763590" className="text-gray-700 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">Call: 07809 763 590</a>
+             <a href="tel:07809763590" className="text-gray-700 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">Call: 07809 763590</a>
             <a
               href="https://wa.me/447809763590"
               target="_blank"

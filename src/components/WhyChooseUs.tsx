@@ -44,7 +44,7 @@ const WhyChooseUs: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                      <div className="order-2 md:order-1">
                         <img 
-                            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1200&auto=format&fit=crop"
+                            src="https://g4gas.co.uk/wp-content/uploads/2024/12/AdobeStock_328224681.jpg"
                             alt="Professional GasTech engineer working on a boiler" 
                             className="rounded-lg shadow-xl w-full h-auto object-cover"
                         />
