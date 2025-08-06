@@ -11,25 +11,24 @@
         scroll-behavior: smooth;
       }
     </style>
-    <!-- TailwindCSS is now handled by the build process -->
-    <!-- Importmap is no longer needed with Vite -->
+    <!-- The importmap has been removed to allow Vite to handle all bundling -->
 
-<link rel="stylesheet" href="/index.css">
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.1.1/",
     "react": "https://esm.sh/react@^19.1.1",
     "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
     "vite": "https://esm.sh/vite@^7.0.6",
     "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^4.7.0"
   }
 }
 </script>
-  <script type="module" crossorigin src="/gastech-website/assets/index-C2iIDTML.js"></script>
+  <script type="module" crossorigin src="/gastech-website/assets/index-DIyqE9p7.js"></script>
   <link rel="stylesheet" crossorigin href="/gastech-website/assets/index-BbKpSY8i.css">
 </head>
   <body>
-    <div id="root"></div>
-</body>
+    <div id="root"></div>
+    <!-- Vite will process this entry point and replace it with optimized script tags in the final build -->
+  </body>
 </html>
