@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#home" onClick={(e) => handleScroll(e, '#home')} className="flex items-center" aria-label="GasTech Home">
-              <img src="/logo.png" alt="GasTech Logo" className="h-12 w-auto" />
+              <img src="/logo.png" alt="GasTech Logo" className="h-16 w-auto" />
             </a>
           </div>
           <div className="hidden md:block">
