@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                     {/* About GasTech */}
                     <div className="space-y-4">
                         <a href="#home" onClick={(e) => handleScroll(e, '#home')} className="inline-block" aria-label="GasTech Home">
-                            <img src="/logo.png" alt="GasTech Logo" className="h-12 w-auto" />
+                            <img src="logo.png" alt="GasTech Logo" className="h-12 w-auto" />
                         </a>
                         <p className="text-blue-200">
                             Your trusted local experts for all gas, heating, and boiler services. Committed to safety, quality, and customer satisfaction.
