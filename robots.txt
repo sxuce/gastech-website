@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sxuce.github.io/gastech-website/sitemap.xml
+Sitemap: https://thegastech.co.uk/sitemap.xml
