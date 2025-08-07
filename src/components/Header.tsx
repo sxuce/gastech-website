@@ -32,18 +32,20 @@ const Header: React.FC = () => {
           </div>
           {/* Nav Links - Center */}
           <div className="hidden md:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="flex items-baseline space-x-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleScroll(e, link.href)}
-                  className="text-gray-700 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
+            <nav aria-label="Main navigation">
+              <div className="flex items-baseline space-x-4">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleScroll(e, link.href)}
+                    className="text-gray-700 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </nav>
           </div>
           {/* Contact & Quote - Right */}
           <div className="hidden md:flex items-center space-x-4 ml-auto">
