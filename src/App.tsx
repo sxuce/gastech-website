@@ -11,26 +11,37 @@ import PromoBanner from './components/PromoBanner';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-white text-gray-700 font-sans">
+    <div className="bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans min-h-screen">
       <Header />
       <PromoBanner />
-      <main>
-        <section id="home">
+      <main className="relative">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full opacity-20 blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-secondary-100 to-primary-100 rounded-full opacity-20 blur-3xl"></div>
+        </div>
+        
+        <section className="relative">
           <Hero />
         </section>
-        <section id="trusted-brands">
+        
+        <section className="relative">
           <TrustedBrands />
         </section>
-        <section id="services">
+        
+        <section className="relative">
           <Services />
         </section>
-        <section id="why-choose-us">
+        
+        <section className="relative">
           <WhyChooseUs />
         </section>
-        <section id="testimonials">
+        
+        <section className="relative">
           <Testimonials />
         </section>
-        <section id="areas-covered">
+        
+        <section className="relative">
           <AreasCovered />
         </section>
       </main>
