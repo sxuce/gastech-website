@@ -30,20 +30,20 @@ const Hero: React.FC = () => {
             <div className="space-y-4">
               <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-white/90 text-sm font-medium">
                 <div className="w-2 h-2 bg-secondary-400 rounded-full animate-pulse"></div>
-                <span>24/7 Emergency Service Available</span>
+                <span>24/7 Emergency Service Available in Leicester</span>
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-                Gas, Heating &{' '}
+                Leicester's Trusted{' '}
                 <span className="gradient-text bg-gradient-to-r from-secondary-400 to-secondary-300 bg-clip-text text-transparent">
-                  Boiler Services
+                  Gas Engineer
                 </span>{' '}
-                You Can Rely On
+                & Boiler Services
               </h1>
               
               <p className="text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 text-blue-100 leading-relaxed">
-                Your local, trusted experts for boiler repair, installation, and servicing. 
-                Professional, reliable, and always here when you need us.
+                Your local Leicester gas engineer for boiler repair, installation, and servicing. 
+                Professional, reliable, and always here when you need us. Serving Leicester and surrounding areas.
               </p>
             </div>
 
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                 <div className="flex-shrink-0 w-8 h-8 bg-secondary-400/20 rounded-full flex items-center justify-center group-hover:bg-secondary-400/30 transition-colors duration-200">
                   <CheckCircleIcon className="h-5 w-5 text-secondary-300" />
                 </div>
-                <span className="text-white/90 font-medium">Gas Safe Registered Engineers</span>
+                <span className="text-white/90 font-medium">Gas Safe Registered Engineers in Leicester</span>
               </div>
               <div className="flex items-center space-x-3 group">
                 <div className="flex-shrink-0 w-8 h-8 bg-secondary-400/20 rounded-full flex items-center justify-center group-hover:bg-secondary-400/30 transition-colors duration-200">
@@ -65,13 +65,13 @@ const Hero: React.FC = () => {
                 <div className="flex-shrink-0 w-8 h-8 bg-secondary-400/20 rounded-full flex items-center justify-center group-hover:bg-secondary-400/30 transition-colors duration-200">
                   <CheckCircleIcon className="h-5 w-5 text-secondary-300" />
                 </div>
-                <span className="text-white/90 font-medium">5-Star Rated Service</span>
+                <span className="text-white/90 font-medium">5-Star Rated Leicester Gas Engineer</span>
               </div>
               <div className="flex items-center space-x-3 group">
                 <div className="flex-shrink-0 w-8 h-8 bg-secondary-400/20 rounded-full flex items-center justify-center group-hover:bg-secondary-400/30 transition-colors duration-200">
                   <CheckCircleIcon className="h-5 w-5 text-secondary-300" />
                 </div>
-                <span className="text-white/90 font-medium">Fast Emergency Response</span>
+                <span className="text-white/90 font-medium">Fast Emergency Response in Leicester</span>
               </div>
             </div>
 
@@ -82,6 +82,7 @@ const Hero: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary flex items-center justify-center space-x-3 text-lg px-8 py-4"
+                aria-label="Get free quote from Leicester gas engineer on WhatsApp"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-1.149 4.204 4.253-1.117z"/>
@@ -91,6 +92,7 @@ const Hero: React.FC = () => {
               <a 
                 href="tel:07809763590"
                 className="btn-outline border-white/30 text-white hover:bg-white hover:text-primary-900 flex items-center justify-center space-x-3 text-lg px-8 py-4"
+                aria-label="Call Leicester gas engineer now"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -111,9 +113,9 @@ const Hero: React.FC = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-gray-800">Ready for a Free Quote?</h3>
+                  <h2 className="text-2xl font-bold text-gray-800">Ready for a Free Quote?</h2>
                   <p className="text-gray-700 leading-relaxed">
-                    Click below to chat with us directly on WhatsApp for a fast, free, no-obligation quote.
+                    Click below to chat with our Leicester gas engineer directly on WhatsApp for a fast, free, no-obligation quote.
                   </p>
                 </div>
                 
@@ -122,6 +124,7 @@ const Hero: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary w-full flex items-center justify-center space-x-3 text-lg py-4"
+                  aria-label="Chat with Leicester gas engineer on WhatsApp"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-1.149 4.204 4.253-1.117z"/>

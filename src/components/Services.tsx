@@ -5,66 +5,66 @@ import { BoilerIcon, WrenchIcon, ShieldCheckIcon, FireIcon, HomeIcon, DocumentTe
 const gasServicesData: Service[] = [
   {
     icon: <BoilerIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Boiler Installation',
-    description: 'Expert installation of high-efficiency boilers from leading brands to keep your home warm.',
+    title: 'Boiler Installation Leicester',
+    description: 'Expert installation of high-efficiency boilers from leading brands in Leicester to keep your home warm and energy-efficient.',
   },
   {
     icon: <WrenchIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Boiler Repair',
-    description: 'Fast and reliable repair services to get your heating and hot water back up and running.',
+    title: 'Boiler Repair Leicester',
+    description: 'Fast and reliable boiler repair services in Leicester to get your heating and hot water back up and running quickly.',
   },
   {
     icon: <ShieldCheckIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Boiler Servicing',
-    description: 'Annual servicing to ensure your boiler is safe, efficient, and reliable all year round.',
+    title: 'Boiler Service Leicester',
+    description: 'Annual boiler servicing in Leicester to ensure your boiler is safe, efficient, and reliable all year round. From £64.99.',
   },
   {
     icon: <DocumentTextIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Landlord Certificates',
-    description: 'Gas Safety Certificates (CP12) for landlords, ensuring your property is compliant and safe.',
+    title: 'Landlord Certificate Leicester',
+    description: 'Gas Safety Certificates (CP12) for landlords in Leicester, ensuring your property is compliant and safe. From £49.99.',
   },
   {
     icon: <FireIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Gas Fire Services',
-    description: 'Installation, servicing, and repair of all types of gas fires and surrounds.',
+    title: 'Gas Fire Services Leicester',
+    description: 'Installation, servicing, and repair of all types of gas fires and surrounds throughout Leicester and surrounding areas.',
   },
   {
     icon: <HomeIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Central Heating',
-    description: 'Full central heating system installations, power flushing, and radiator repairs.',
+    title: 'Central Heating Leicester',
+    description: 'Full central heating system installations, power flushing, and radiator repairs in Leicester for optimal home comfort.',
   },
 ];
 
 const plumbingServicesData: Service[] = [
     {
       icon: <WaterDropIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'Emergency Plumbing',
-      description: '24/7 emergency response for leaks, bursts, and all urgent plumbing issues.',
+      title: 'Emergency Plumbing Leicester',
+      description: '24/7 emergency response for leaks, bursts, and all urgent plumbing issues in Leicester and surrounding areas.',
     },
     {
       icon: <TapIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'Tap Installation & Repair',
-      description: 'Fixing dripping taps or installing stylish new ones for your kitchen and bathroom.',
+      title: 'Tap Installation & Repair Leicester',
+      description: 'Fixing dripping taps or installing stylish new ones for your kitchen and bathroom in Leicester homes.',
     },
     {
       icon: <ToiletIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'Toilet Repair & Installation',
-      description: 'Resolving all toilet-related problems from blockages to new installations.',
+      title: 'Toilet Repair & Installation Leicester',
+      description: 'Resolving all toilet-related problems from blockages to new installations throughout Leicester.',
     },
     {
       icon: <ShowerIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'Shower & Bath Services',
-      description: 'Professional installation and repair of showers, baths, and associated pipework.',
+      title: 'Shower & Bath Services Leicester',
+      description: 'Professional installation and repair of showers, baths, and associated pipework in Leicester properties.',
     },
     {
         icon: <WrenchIcon className="h-12 w-12 text-primary-600 mb-4" />,
-        title: 'Leak Detection & Repair',
-        description: 'Advanced detection to find and fix hidden leaks in your pipework efficiently.',
+        title: 'Leak Detection & Repair Leicester',
+        description: 'Advanced detection to find and fix hidden leaks in your pipework efficiently across Leicester.',
     },
     {
       icon: <HomeIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'General Pipework',
-      description: 'Comprehensive services for pipe repairs, replacements, and clearing stubborn blockages.',
+      title: 'General Pipework Leicester',
+      description: 'Comprehensive services for pipe repairs, replacements, and clearing stubborn blockages in Leicester homes.',
     },
   ];
 
@@ -87,6 +87,7 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
       target="_blank" 
       rel="noopener noreferrer" 
       className="mt-6 font-semibold text-primary-600 hover:text-primary-800 group/link flex items-center space-x-2 transition-all duration-300 hover:translate-x-1"
+      aria-label={`Get a quote for ${service.title} in Leicester`}
     >
       <span>Get a Quote</span>
       <svg className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -113,16 +114,16 @@ const Services: React.FC = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-            <span>Our Services</span>
+            <span>Our Leicester Services</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Professional{' '}
-            <span className="gradient-text">Gas & Plumbing</span>{' '}
-            Services
+            <span className="gradient-text">Gas Engineer Leicester</span>{' '}
+            & Plumbing Services
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From emergency repairs to brand new installations, we provide a complete range of gas and heating solutions 
-            with the highest standards of safety and quality.
+            From emergency boiler repairs to brand new installations, we provide a complete range of gas and heating solutions 
+            in Leicester with the highest standards of safety and quality. Your trusted Leicester gas engineer.
           </p>
         </div>
 
@@ -137,7 +138,7 @@ const Services: React.FC = () => {
             }`}
             aria-pressed={activeTab === 'gas'}
           >
-            <span className="relative z-10">Gas Services</span>
+            <span className="relative z-10">Leicester Gas Services</span>
             {activeTab === 'gas' && (
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl"></div>
             )}
@@ -151,7 +152,7 @@ const Services: React.FC = () => {
             }`}
             aria-pressed={activeTab === 'plumbing'}
           >
-            <span className="relative z-10">Plumbing Services</span>
+            <span className="relative z-10">Leicester Plumbing Services</span>
             {activeTab === 'plumbing' && (
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl"></div>
             )}
@@ -169,10 +170,10 @@ const Services: React.FC = () => {
         <div className="text-center mt-16">
           <div className="card p-8 md:p-12 max-w-4xl mx-auto bg-gradient-to-br from-primary-50 to-accent-50 border border-primary-100">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Need Emergency Service?
+              Need Emergency Service in Leicester?
             </h3>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Don't wait for a small issue to become a big problem. Contact us now for fast, reliable service.
+              Don't wait for a small issue to become a big problem. Contact your Leicester gas engineer now for fast, reliable service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -180,6 +181,7 @@ const Services: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary flex items-center justify-center space-x-3"
+                aria-label="Get emergency service quote from Leicester gas engineer on WhatsApp"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-1.149 4.204 4.253-1.117z"/>
@@ -189,6 +191,7 @@ const Services: React.FC = () => {
               <a 
                 href="tel:07809763590"
                 className="btn-outline flex items-center justify-center space-x-3"
+                aria-label="Call Leicester gas engineer now for emergency service"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
