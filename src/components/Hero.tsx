@@ -4,7 +4,7 @@ import { CheckCircleIcon } from './IconComponents';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 scroll-mt-24">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-12 pb-10">
       {/* Background with gradient overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-secondary-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative container-custom z-10 pt-20">
+      <div className="relative container-custom z-10 pt-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Column: Content */}
@@ -123,7 +123,7 @@ const Hero: React.FC = () => {
                   href="https://wa.me/447809763590"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-secondary w-full flex items-center justify-center space-x-3 text-lg py-4"
+                  className="btn-whatsapp w-full flex items-center justify-center space-x-3 text-lg py-4"
                   aria-label="Chat with Leicester gas engineer on WhatsApp"
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

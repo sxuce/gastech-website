@@ -4,7 +4,15 @@ const Footer: React.FC = () => {
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
         e.preventDefault();
         const targetId = href.substring(1);
-        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const headerHeight = 80; // h-20 = 80px
+            const targetPosition = targetElement.offsetTop - headerHeight;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
     };
 
     return (
