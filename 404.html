@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=/" />
+  </head>
+  <body>
+    <script>
+      // Redirect to root and preserve path for React Router
+      var redirectTo = "/" + (window.location.pathname + window.location.search + window.location.hash).replace(/^\/+/, "");
+      window.location.replace(redirectTo);
+    </script>
+  </body>
+</html>
