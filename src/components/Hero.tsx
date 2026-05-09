@@ -143,8 +143,8 @@ const Hero: React.FC = () => {
           {/* Right Column: Lead capture card */}
           <div className="animate-slide-up flex justify-center lg:justify-end">
             <div
-              className="w-full max-w-sm bg-white/96 backdrop-blur-xl rounded-3xl shadow-large border border-white/30 overflow-hidden"
-              style={{ boxShadow: '0 32px 80px rgba(0,0,0,0.3)' }}
+              className="w-full max-w-sm bg-white rounded-3xl border border-gray-100 overflow-hidden"
+              style={{ boxShadow: '0 32px 80px rgba(0,0,0,0.35)' }}
             >
               {/* Card header strip */}
               <div className="bg-gradient-to-r from-secondary-500 to-secondary-600 px-7 py-5">
