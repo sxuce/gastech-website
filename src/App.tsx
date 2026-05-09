@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -8,44 +8,40 @@ import WhyChooseUs from './components/WhyChooseUs';
 import AreasCovered from './components/AreasCovered';
 import Testimonials from './components/Testimonials';
 import PromoBanner from './components/PromoBanner';
+import FloatingCTA from './components/FloatingCTA';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -50px 0px' }
+    );
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach((el) =>
+      observer.observe(el)
+    );
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans min-h-screen">
+    <div className="bg-gray-50 text-gray-800 min-h-screen pb-16 lg:pb-0">
       <Header />
       <PromoBanner />
-      <main className="relative">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full opacity-20 blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-secondary-100 to-primary-100 rounded-full opacity-20 blur-3xl"></div>
-        </div>
-        
-        <section className="relative">
-          <Hero />
-        </section>
-        
-        <section className="relative">
-          <TrustedBrands />
-        </section>
-        
-        <section className="relative">
-          <Services />
-        </section>
-        
-        <section className="relative">
-          <WhyChooseUs />
-        </section>
-        
-        <section className="relative">
-          <Testimonials />
-        </section>
-        
-        <section className="relative">
-          <AreasCovered />
-        </section>
+      <main>
+        <Hero />
+        <TrustedBrands />
+        <Services />
+        <WhyChooseUs />
+        <Testimonials />
+        <AreasCovered />
       </main>
       <Footer />
+      <FloatingCTA />
     </div>
   );
 };

@@ -1,96 +1,60 @@
 import React, { useState } from 'react';
 import type { Service } from '../types';
-import { BoilerIcon, WrenchIcon, ShieldCheckIcon, FireIcon, HomeIcon, DocumentTextIcon, WaterDropIcon, TapIcon, ToiletIcon, ShowerIcon } from './IconComponents';
+import {
+  BoilerIcon, WrenchIcon, ShieldCheckIcon, FireIcon, HomeIcon,
+  DocumentTextIcon, WaterDropIcon, TapIcon, ToiletIcon, ShowerIcon,
+} from './IconComponents';
+
+const WA = 'https://wa.me/447809763590';
 
 const gasServicesData: Service[] = [
-  {
-    icon: <BoilerIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Boiler Installation Leicester',
-    description: 'Expert installation of high-efficiency boilers from leading brands in Leicester to keep your home warm and energy-efficient.',
-  },
-  {
-    icon: <WrenchIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Boiler Repair Leicester',
-    description: 'Fast and reliable boiler repair services in Leicester to get your heating and hot water back up and running quickly.',
-  },
-  {
-    icon: <ShieldCheckIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Boiler Service Leicester',
-    description: 'Annual boiler servicing in Leicester to ensure your boiler is safe, efficient, and reliable all year round. From £64.99.',
-  },
-  {
-    icon: <DocumentTextIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Landlord Certificate Leicester',
-    description: 'Gas Safety Certificates (CP12) for landlords in Leicester, ensuring your property is compliant and safe. From £49.99.',
-  },
-  {
-    icon: <FireIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Gas Fire Services Leicester',
-    description: 'Installation, servicing, and repair of all types of gas fires and surrounds throughout Leicester and surrounding areas.',
-  },
-  {
-    icon: <HomeIcon className="h-12 w-12 text-primary-600 mb-4" />,
-    title: 'Central Heating Leicester',
-    description: 'Full central heating system installations, power flushing, and radiator repairs in Leicester for optimal home comfort.',
-  },
+  { icon: <BoilerIcon className="h-7 w-7" />, title: 'Boiler Installation Leicester', description: 'Expert installation of high-efficiency boilers from leading brands to keep your home warm and energy-efficient.' },
+  { icon: <WrenchIcon className="h-7 w-7" />, title: 'Boiler Repair Leicester', description: 'Fast and reliable boiler repair in Leicester to get your heating and hot water back running quickly.' },
+  { icon: <ShieldCheckIcon className="h-7 w-7" />, title: 'Boiler Service Leicester', description: 'Annual boiler servicing to ensure your system is safe, efficient, and reliable all year round. From £64.99.' },
+  { icon: <DocumentTextIcon className="h-7 w-7" />, title: 'Landlord Certificate Leicester', description: 'Gas Safety Certificates (CP12) for landlords ensuring your property is fully compliant and safe. From £49.99.' },
+  { icon: <FireIcon className="h-7 w-7" />, title: 'Gas Fire Services Leicester', description: 'Installation, servicing, and repair of all types of gas fires and surrounds throughout Leicestershire.' },
+  { icon: <HomeIcon className="h-7 w-7" />, title: 'Central Heating Leicester', description: 'Full central heating system installations, power flushing, and radiator repairs for optimal home comfort.' },
 ];
 
 const plumbingServicesData: Service[] = [
-    {
-      icon: <WaterDropIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'Emergency Plumbing Leicester',
-      description: '24/7 emergency response for leaks, bursts, and all urgent plumbing issues in Leicester and surrounding areas.',
-    },
-    {
-      icon: <TapIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'Tap Installation & Repair Leicester',
-      description: 'Fixing dripping taps or installing stylish new ones for your kitchen and bathroom in Leicester homes.',
-    },
-    {
-      icon: <ToiletIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'Toilet Repair & Installation Leicester',
-      description: 'Resolving all toilet-related problems from blockages to new installations throughout Leicester.',
-    },
-    {
-      icon: <ShowerIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'Shower & Bath Services Leicester',
-      description: 'Professional installation and repair of showers, baths, and associated pipework in Leicester properties.',
-    },
-    {
-        icon: <WrenchIcon className="h-12 w-12 text-primary-600 mb-4" />,
-        title: 'Leak Detection & Repair Leicester',
-        description: 'Advanced detection to find and fix hidden leaks in your pipework efficiently across Leicester.',
-    },
-    {
-      icon: <HomeIcon className="h-12 w-12 text-primary-600 mb-4" />,
-      title: 'General Pipework Leicester',
-      description: 'Comprehensive services for pipe repairs, replacements, and clearing stubborn blockages in Leicester homes.',
-    },
-  ];
+  { icon: <WaterDropIcon className="h-7 w-7" />, title: 'Emergency Plumbing Leicester', description: '24/7 emergency response for leaks, bursts, and all urgent plumbing issues in Leicester.' },
+  { icon: <TapIcon className="h-7 w-7" />, title: 'Tap Installation & Repair Leicester', description: 'Fixing dripping taps or installing stylish new ones for your kitchen and bathroom.' },
+  { icon: <ToiletIcon className="h-7 w-7" />, title: 'Toilet Repair & Installation Leicester', description: 'Resolving all toilet-related problems from blockages to new installations throughout Leicester.' },
+  { icon: <ShowerIcon className="h-7 w-7" />, title: 'Shower & Bath Services Leicester', description: 'Professional installation and repair of showers, baths, and associated pipework.' },
+  { icon: <WrenchIcon className="h-7 w-7" />, title: 'Leak Detection & Repair Leicester', description: 'Advanced detection to find and fix hidden leaks in your pipework efficiently.' },
+  { icon: <HomeIcon className="h-7 w-7" />, title: 'General Pipework Leicester', description: 'Comprehensive services for pipe repairs, replacements, and clearing stubborn blockages.' },
+];
 
 const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
-  <div 
-    className="card card-hover p-8 h-full flex flex-col items-center text-center group"
-    style={{ animationDelay: `${index * 0.1}s` }}
+  <div
+    className="card card-hover card-accent p-7 flex flex-col group"
+    style={{ transitionDelay: `${index * 0.06}s` }}
   >
-    <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center mb-6 group-hover:from-primary-200 group-hover:to-primary-300 transition-all duration-300 shadow-lg">
+    {/* Icon */}
+    <div className="w-14 h-14 rounded-2xl bg-primary-50 text-primary-600 flex items-center justify-center mb-5 group-hover:bg-secondary-50 group-hover:text-secondary-600 transition-all duration-300">
       {service.icon}
     </div>
-    <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-primary-600 transition-colors duration-300">
+
+    <h3 className="text-lg font-bold text-gray-900 mb-2.5 group-hover:text-primary-700 transition-colors duration-300 leading-snug">
       {service.title}
     </h3>
-    <p className="text-gray-600 flex-grow leading-relaxed">
+
+    <p className="text-gray-500 text-sm leading-relaxed flex-grow">
       {service.description}
     </p>
-    <a 
-      href="https://wa.me/447809763590" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="mt-6 font-semibold text-primary-600 hover:text-primary-800 group/link flex items-center space-x-2 transition-all duration-300 hover:translate-x-1"
-      aria-label={`Get a quote for ${service.title} in Leicester`}
+
+    <a
+      href={WA}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-5 inline-flex items-center space-x-1.5 text-sm font-semibold text-primary-600 group-hover:text-secondary-600 transition-colors duration-300"
+      aria-label={`Get a quote for ${service.title}`}
     >
       <span>Get a Quote</span>
-      <svg className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg
+        className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
+        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      >
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
       </svg>
     </a>
@@ -98,106 +62,101 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
 );
 
 const Services: React.FC = () => {
-    const [activeTab, setActiveTab] = useState<'gas' | 'plumbing'>('gas');
-
-    const servicesToDisplay = activeTab === 'gas' ? gasServicesData : plumbingServicesData;
+  const [activeTab, setActiveTab] = useState<'gas' | 'plumbing'>('gas');
+  const services = activeTab === 'gas' ? gasServicesData : plumbingServicesData;
 
   return (
-    <section id="services" className="section-padding bg-gradient-to-br from-gray-50 to-white relative overflow-hidden scroll-mt-24">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full opacity-20 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-secondary-100 to-primary-100 rounded-full opacity-20 blur-3xl"></div>
+    <section id="services" className="section-padding bg-white relative overflow-hidden scroll-mt-24">
+      {/* Subtle background texture */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-primary-50 rounded-full opacity-60 blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-secondary-50 rounded-full opacity-60 blur-3xl" />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-            <span>Our Leicester Services</span>
+
+        {/* Section header */}
+        <div className="text-center mb-14 reveal">
+          <div className="section-label bg-primary-50 text-primary-700 mb-5">
+            <span className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
+            <span>Our Services</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5">
             Professional{' '}
-            <span className="gradient-text">Gas Engineer Leicester</span>{' '}
-            & Plumbing Services
+            <span className="gradient-text">Gas & Plumbing</span>
+            <br />Services in Leicester
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From emergency boiler repairs to brand new installations, we provide a complete range of gas and heating solutions 
-            in Leicester with the highest standards of safety and quality. Your trusted Leicester gas engineer.
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+            From emergency boiler repairs to brand new installations — complete gas and heating
+            solutions delivered to the highest standards of safety and quality.
           </p>
         </div>
 
-        {/* Tab Navigation */}
-        <div className="flex justify-center items-center space-x-2 mb-16">
-          <button
-            onClick={() => setActiveTab('gas')}
-            className={`relative px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 ${
-              activeTab === 'gas'
-                ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg scale-105'
-                : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 hover:border-primary-300'
-            }`}
-            aria-pressed={activeTab === 'gas'}
-          >
-            <span className="relative z-10">Leicester Gas Services</span>
-            {activeTab === 'gas' && (
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl"></div>
-            )}
-          </button>
-          <button
-            onClick={() => setActiveTab('plumbing')}
-            className={`relative px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 ${
-              activeTab === 'plumbing'
-                ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg scale-105'
-                : 'bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 hover:border-primary-300'
-            }`}
-            aria-pressed={activeTab === 'plumbing'}
-          >
-            <span className="relative z-10">Leicester Plumbing Services</span>
-            {activeTab === 'plumbing' && (
-              <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700 rounded-2xl"></div>
-            )}
-          </button>
+        {/* Tab switcher */}
+        <div className="flex justify-center mb-12 reveal">
+          <div className="inline-flex bg-gray-100 rounded-2xl p-1.5 gap-1">
+            {(['gas', 'plumbing'] as const).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-7 py-3 rounded-xl font-semibold text-sm tracking-wide transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${
+                  activeTab === tab
+                    ? 'bg-white text-primary-700 shadow-medium'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+                aria-pressed={activeTab === tab}
+              >
+                {tab === 'gas' ? 'Gas Services' : 'Plumbing Services'}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesToDisplay.map((service, index) => (
-            <ServiceCard key={index} service={service} index={index} />
+        {/* Services grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div key={index} className="reveal" style={{ transitionDelay: `${index * 0.07}s` }}>
+              <ServiceCard service={service} index={index} />
+            </div>
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="card p-8 md:p-12 max-w-4xl mx-auto bg-gradient-to-br from-primary-50 to-accent-50 border border-primary-100">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Need Emergency Service in Leicester?
-            </h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Don't wait for a small issue to become a big problem. Contact your Leicester gas engineer now for fast, reliable service.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://wa.me/447809763590"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary flex items-center justify-center space-x-3"
-                aria-label="Get emergency service quote from Leicester gas engineer on WhatsApp"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-1.149 4.204 4.253-1.117z"/>
-                </svg>
-                <span>Get Emergency Quote</span>
-              </a>
-              <a 
-                href="tel:07809763590"
-                className="btn-outline flex items-center justify-center space-x-3"
-                aria-label="Call Leicester gas engineer now for emergency service"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <span>Call Now</span>
-              </a>
+        {/* Bottom CTA */}
+        <div className="mt-16 reveal">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-900 to-primary-950 p-10 md:p-14 text-center">
+            {/* Background glow */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-secondary-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-400/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+                Need Emergency Service in Leicester?
+              </h3>
+              <p className="text-blue-200/80 mb-8 max-w-xl mx-auto">
+                Don't wait — small issues become big problems. Contact us now for fast, reliable service.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary flex items-center justify-center space-x-2.5"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 4.315 1.731 6.086l-1.149 4.204 4.253-1.117z"/>
+                  </svg>
+                  <span>Get Emergency Quote</span>
+                </a>
+                <a
+                  href="tel:07809763590"
+                  className="btn-outline flex items-center justify-center space-x-2.5"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>Call Now</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
